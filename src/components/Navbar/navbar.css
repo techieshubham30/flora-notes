@@ -1,0 +1,72 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+
+.header {
+    background-color: var(--primary-color);
+    padding: 1.5rem 2.5rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+
+.nav-left {
+    display: flex;
+    gap: 1rem;
+    font-size: 2.5rem;
+}
+
+
+.nav-left .brand-name{
+    color: var(--white-color);
+    font-weight: bold;
+    cursor: pointer;
+    letter-spacing: 0.8px;
+}
+
+.nav-left .seedling-logo {
+    color: var(--yellow-color);
+    font-weight: bold;
+}
+
+.nav-left .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    font-size: 2rem;
+}
+
+.nav-links a {
+    color: var(--white-color);
+    letter-spacing: 0.5px;
+}
+
+.nav-links a:hover{
+    color: var(--light-black);
+}
+.nav-right {
+    display: flex;
+    justify-content: right;
+    width: 40%;
+}
+
+.icon-container {
+    display: flex;
+    gap: 3rem;
+}
+
+.nav-right .icon-container a {
+    font-size: 2.5rem;
+    color: var(--white-color);
+}
+
+.icon-container a:hover {
+    color: var(--light-black);
+
+}
+
