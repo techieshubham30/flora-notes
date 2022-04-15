@@ -1,0 +1,44 @@
+.footer {
+    background-color: var(--primary-color);
+    text-align: center;
+    padding: 1em 2em 1em 2em;
+    color: var(--white-color);
+    position: fixed;
+    bottom: 0rem;
+    width: 100%;
+}
+
+.footer-header {
+    font-size: 2rem;
+    margin-bottom: 1em;
+    font-weight: bold;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+    
+}
+
+.social-icons {
+   
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 3.2rem;
+    margin-bottom: 1em;
+}
+
+.social-link{
+    font-size: 2.5rem;
+}
+.social-icons a:hover {
+    color: var(--light-black);
+}
+
+.footer-list-item a {
+    color: var(--white-color);
+}
+
+.footer-copy {
+    font-size: 1.5rem;
+    opacity: 0.80;
+    letter-spacing: 1px;
+}
