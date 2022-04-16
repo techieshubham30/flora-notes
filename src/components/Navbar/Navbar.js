@@ -1,8 +1,23 @@
 import "./navbar.css";
 import { FaSeedling, FaRegUserCircle, FaSignInAlt } from "react-icons/fa";
-
+import { useAuth} from "../../contexts/auth-context";
+import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 const Navbar = () => {
+  const navigate = useNavigate();
+  const {
+    auth: { isAuthenticated },
+    setAuth,
+  } = useAuth();
+
+  const signoutHandler=()=>{
+    localStorage.removeItem("TOKEN");
+    setAuth({
+      isAuthenticated: false,
+      token: "",
+    });
+    navigate("/");
+  };
   return (
     <header className="header">
       <nav className="navbar">
@@ -16,11 +31,11 @@ const Navbar = () => {
 
         <div className="nav-right">
           <div className="icon-container">
-            <a href="#">
+            <Link to="/">
               <FaRegUserCircle />
-            </a>
+            </Link>
 
-            <Link to="/signin">
+            <Link to="/signin" onClick={signoutHandler}>
               <FaSignInAlt />
             </Link>
           </div>
