@@ -1,0 +1,29 @@
+.sidebar-container{
+    height: 90vh;
+    width: 20%;
+}
+
+.sidebar-items{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+
+
+.sidebar-item{
+    display: flex;
+    gap: 2.5rem;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--primary-color);
+    border-radius: 0 2rem 2rem 0 ;
+    flex-basis: 100%;
+    padding: 1.5rem 3rem;
+}
+
+.sidebar-item:hover{
+    background-color: var(--light-green);
+
+}
