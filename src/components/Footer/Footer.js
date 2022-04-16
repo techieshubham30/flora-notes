@@ -6,12 +6,12 @@ const Footer = () => {
       <div className="footer-header">Made by Shubham Singh</div>
       <ul className="social-icons">
         <li className="footer-list-item">
-          <a href="https://github.com/techieshubham30" class="github-link">
+          <a href="https://github.com/techieshubham30" className="github-link">
             <FaGithub className="social-link"/>
           </a>
         </li>
         <li className="footer-list-item">
-          <a href="https://twitter.com/shubhamsingh088" class="twitter">
+          <a href="https://twitter.com/shubhamsingh088" className="twitter">
             <FaTwitter className="social-link"/>
           </a>
         </li>

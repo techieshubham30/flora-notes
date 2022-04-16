@@ -12,17 +12,25 @@
     width: 100%;
 }
 
-.login-btn{
+.login-btn,.login-guest-btn{
     padding: 1.3rem 2rem;
-    color: var(--white-color);
-    background-color: var(--primary-color);
     font-size: 1.7rem;
     border-radius: 1rem;
     text-transform: uppercase;
-    letter-spacing: 0.5PX;
+    letter-spacing: 0.6px;
     font-weight: bold;
 }
 
+.login-btn{
+    color: var(--white-color);
+    background-color: var(--primary-color);
+}
+
+
+.login-guest-btn:hover{
+    background-color: var(--light-black);
+    color:var(--white-color);
+}
 .login-btn:hover{
     background-color: var(--light-black);
 }
