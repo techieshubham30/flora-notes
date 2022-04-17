@@ -1,14 +1,24 @@
+import { NoteInput } from "../../components/NoteInput/NoteInput";
 import { Sidebar } from "../../components/Sidebar/Sidebar";
+import { useNote } from "../../contexts/note-context";
+import { NoteCard } from "../../components/NoteCard/NoteCard";
 import "./home-page.css";
-const HomePage=()=>{
-    return(
-        <div className="main-page">
-             <Sidebar/>
-            <div className="notes-container">
-                <h1>notes</h1>
-            </div>
-        </div>
-    );
-}
+const HomePage = () => {
+  const { noteState } = useNote();
 
-export {HomePage};
+  return (
+    <div className="home-page">
+      <Sidebar />
+      <div className="notes-container">
+        <NoteInput />
+        <div className="notes-wrapper">
+          {noteState.map((item) => {
+            return <NoteCard note={item} key={item._id} />;
+          })}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export { HomePage };
