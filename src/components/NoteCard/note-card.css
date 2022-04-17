@@ -1,0 +1,22 @@
+.text-only-card {
+    flex-basis: 20%;
+    padding: 1rem;
+    border: 2px solid var(--primary-color);
+    border-radius: 1rem;
+    font-size: 1.5rem;
+}
+.card-title{
+  font-size: 2rem;
+}
+.about-card{
+  font-size: 1.5rem;
+}
+.card-action-container{
+    color: var(--primary-color);
+    display: flex;
+    width: 50%;
+}
+
+.card-icon{
+  font-size: 2.2rem;
+}

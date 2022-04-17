@@ -1,5 +1,15 @@
-.main-page{
+
+.home-page{
+  display: flex;
+}
+
+.notes-container{
+  flex-basis: 100%;
+}
+
+.notes-wrapper{
   display: flex;
   gap: 1.5rem;
-  padding-top: 1.3rem;
+  flex-wrap: wrap;
+  padding: 2rem;
 }

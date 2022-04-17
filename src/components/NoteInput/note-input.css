@@ -1,0 +1,38 @@
+.note-input-container{
+  display: flex;
+  flex-direction: column;
+  margin: 2rem auto;
+  border: 1px solid var(--primary-color);
+  border-radius: 1rem;
+  padding: 0rem 1rem 1rem 1rem;
+  width: 40%;
+
+}
+
+.note-input-container input, textarea{
+    padding: 2rem 0 2rem 0;
+    width: 100%;
+   
+}
+
+.note-title{
+    font-size: 2rem;
+}
+
+.take-notes{
+    font-size: 1.5rem;
+}
+
+textarea{
+    resize: none;
+}
+
+.btn-grp{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn-primary{
+   font-size: 1.5rem;
+   letter-spacing: 1px;
+}
