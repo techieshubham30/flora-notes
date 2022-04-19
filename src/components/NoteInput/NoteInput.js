@@ -2,8 +2,9 @@ import "./note-input.css";
 import { useAuth } from "../../contexts/auth-context";
 import { useNote } from "../../contexts/note-context";
 import { addNoteService } from "../../services/addNoteService";
+import {MdOutlineColorLens, MdLabelOutline}  from "react-icons/md"
 const NoteInput = () => {
-  const { noteState, setNoteState, input, setInput } = useNote();
+  const {setNoteState, input, setInput } = useNote();
   const { auth } = useAuth();
 
   const addNoteHandler = async (token) => {
@@ -47,6 +48,10 @@ const NoteInput = () => {
         }
       />
       <div className="btn-grp">
+       <div className="tools">
+         <MdOutlineColorLens/>
+         <MdLabelOutline/>
+       </div>
         <button
           className="btn btn-primary"
           onClick={(e) => {

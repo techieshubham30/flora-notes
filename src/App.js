@@ -7,6 +7,8 @@ import { Signup } from "./pages/LandingPage/Signup/Signup";
 import { PrivateRoute } from "./privateRoute/PrivateRoute";
 import { HomePage } from "./pages/HomePage/HomePage";
 import MockmanEs from "mockman-js";
+import { Archive } from "./pages/Archive/Archive";
+import { Trash } from "./pages/Trash/Trash";
 
 function App() {
   return (
@@ -16,7 +18,7 @@ function App() {
         <Route path="/" element={<LandingPage />} />
         <Route path="/signin" element={<Signin />} />
         <Route path="/signup" element={<Signup />} />
-        <Route path="/mockman" element={<MockmanEs/>}/>
+        <Route path="/mockman" element={<MockmanEs />} />
         <Route
           path="/home-page"
           element={
@@ -25,6 +27,20 @@ function App() {
             </PrivateRoute>
           }
         />
+
+        <Route
+          path="/archive"
+          element={
+            <PrivateRoute>
+              <Archive />
+            </PrivateRoute>
+          }
+        />
+        <Route path="/trash" element={
+          <PrivateRoute>
+            <Trash/>
+          </PrivateRoute>
+        }/>
       </Routes>
       <Footer />
     </div>
