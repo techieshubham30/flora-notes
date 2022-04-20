@@ -27,3 +27,7 @@
     background-color: var(--light-green);
 
 }
+
+.active{
+    background-color: var(--light-green);
+}

@@ -13,7 +13,7 @@ const HomePage = () => {
         <NoteInput />
         <div className="notes-wrapper">
           {noteState.map((item) => {
-            return <NoteCard note={item} key={item._id} />;
+            return !item.noteInTrash && <NoteCard note={item} key={item._id} />;
           })}
         </div>
       </div>

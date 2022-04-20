@@ -12,4 +12,6 @@ const addNoteService = async (token, note) => {
   return data.notes;
 };
 
+
+
 export { addNoteService };

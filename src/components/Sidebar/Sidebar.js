@@ -6,21 +6,29 @@ const Sidebar = () => {
   return (
     <div className="sidebar-container">
       <div className="sidebar-items">
-        <NavLink to="/" className="sidebar-item">
+        <NavLink
+          to="/home-page"
+          className="sidebar-item"
+          activeClassName="active"
+        >
           <CgNotes className="icon" />
           <span>Notes</span>
         </NavLink>
 
-        <NavLink to="/" className="sidebar-item">
+        <NavLink to="/" className="sidebar-item" activeClassName="active">
           <MdLabelOutline />
           <span>Labels</span>
         </NavLink>
 
-        <NavLink to="/" className="sidebar-item">
+        <NavLink
+          to="/archive"
+          className="sidebar-item"
+          activeClassName="active"
+        >
           <MdOutlineArchive />
           <span>Archive</span>
         </NavLink>
-        <NavLink to="/" className="sidebar-item">
+        <NavLink to="/trash" className="sidebar-item" activeClassName="active">
           <CgTrash className="icon" />
           <span>Trash</span>
         </NavLink>
