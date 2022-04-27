@@ -1,6 +1,6 @@
 import "./note-card.css";
 import { CgTrash } from "react-icons/cg";
-import { MdArchive, MdOutlineColorLens, MdUnarchive } from "react-icons/md";
+import { MdArchive, MdOutlineColorLens, MdUnarchive, MdEdit } from "react-icons/md";
 import { useNote } from "../../contexts/note-context";
 import { useAuth } from "../../contexts/auth-context";
 import { archiveNoteService } from "../../services/archiveNoteService";
@@ -8,12 +8,14 @@ import { unArchiveNoteService } from "../../services/unArchiveNoteService";
 import { restoreArchiveService } from "../../services/restoreArchiveService";
 import { updateNoteService } from "../../services/updateNoteService";
 import { useState } from "react";
+import { Modal } from "../Modal/Modal";
 const NoteCard = (item) => {
   const { setNoteState, setArchiveState, archiveState } = useNote();
+  const [isEditing, setEditing] = useState(false);
   const {
     auth: { token },
   } = useAuth();
-  const updateNote = useState(item.note);
+  const [updateNote,setUpdateNote] = useState(item.note);
   const inArchive = archiveState?.find(
     (eachNote) => eachNote._id === item.note._id
   );
@@ -43,6 +45,17 @@ const NoteCard = (item) => {
 
   return (
     <div className="text-only-card">
+    {
+      isEditing && (
+        <Modal
+          currNote={item.note}
+          setEditing={setEditing}
+          isEditing={isEditing}
+          updateNote={updateNote}
+          setUpdateNote={setUpdateNote}
+        />
+      )
+    }
       <div className="card-text-container">
         <div className="card-title ">
           <div>{item.note.title}</div>
@@ -50,7 +63,7 @@ const NoteCard = (item) => {
 
         <div className="about-card ">{item.note.desc}</div>
         <div className="card-action-container">
-          <MdOutlineColorLens className="card-icon" />
+          <MdEdit className="card-icon" onClick={()=>setEditing((edit)=>!edit)} />
           {inArchive ? (
             <MdUnarchive
               className="card-icon"
