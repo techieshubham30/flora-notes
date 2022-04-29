@@ -20,7 +20,10 @@ const Trash = () => {
         {noteState.map((item) => {
           return (
             item.noteInTrash && (
-              <div className="text-only-card" key={item._id}>
+              <div
+                className={`text-only-card ${item.noteColor}`}
+                key={item._id}
+              >
                 <div className="card-text-container">
                   <div className="card-title ">
                     <div>{item.title}</div>
