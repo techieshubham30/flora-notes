@@ -6,13 +6,14 @@ const NoteContext = createContext();
 
 const NoteProvider = ({ children }) => {
   const [state, dispatch] = useReducer(noteReducer,{
-    noteInTrash:false
+    
   })
   const [noteState, setNoteState] = useState([]);
   const [input, setInput] = useState({
     title: "",
     desc: "",
     noteInTrash:false,
+    noteColor:"default",
   });
 
   const [archiveState, setArchiveState] = useState([]);

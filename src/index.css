@@ -6,6 +6,11 @@
   --light-black:rgb(0,0,0,.60);
   --light-green:#ddeede;
   --yellow-color:#FBBF24;
+  --muted-green: #ccff90;
+  --muted-yellow:#fff475;
+  --muted-blue:#cbf0f8;
+  --grey:#e8eaed;
+  --brown:#e6c9a8;
 
 }
 *{
@@ -25,6 +30,7 @@ html{
   scroll-behavior: smooth;
   
 }
+
 
 
 

@@ -1,0 +1,43 @@
+.show-color-palette{
+    display: flex;
+    background-color: var(--light-green);
+    border-radius: 5px;
+    padding: 1rem;
+    gap: 1rem;
+    position: absolute;
+    border: 0.5px solid black;
+}
+
+.hide-color-palette{
+    display: none;
+}
+
+.color{
+    border-radius: 50%;
+    padding: 1.5rem;
+    cursor: pointer;
+    border: 0.5px solid black;
+
+}
+
+.brown{
+    background-color: var(--brown);
+
+}
+
+.green{
+  background-color: var(--muted-green);
+}
+
+.yellow{
+ background-color: var(--muted-yellow);
+}
+
+.blue{
+  background-color: var(--muted-blue);
+}
+
+.grey{
+    background-color: var(--grey);
+}
+
