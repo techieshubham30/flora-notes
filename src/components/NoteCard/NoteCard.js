@@ -50,7 +50,7 @@ const NoteCard = (item) => {
   console.log(item);
 
   return (
-    <div className={`text-only-card ${item.note.noteColor}`}>
+    <div className={`text-only-card shadow-box ${item.note.noteColor}`}>
       {isEditing && (
         <Modal
           currNote={item.note}
